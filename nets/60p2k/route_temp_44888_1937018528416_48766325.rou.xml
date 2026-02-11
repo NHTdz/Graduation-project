@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<routes>
+  <vTypeDistribution id="civilianMix">
+    <vType id="moto" vClass="motorcycle" accel="2.6" decel="4.5" length="1.9" minGap="1.0" maxSpeed="16.0" sigma="0.5" speedFactor="normc(1.0,0.12,0.7,1.3)" color="0,255,0" probability="0.50" />
+    <vType id="car" vClass="passenger" accel="2.6" decel="4.5" length="4.5" minGap="2.5" maxSpeed="20.0" sigma="0.5" speedFactor="normc(1.0,0.10,0.7,1.3)" color="255,0,0" probability="0.20" />
+    <vType id="truck" vClass="truck" accel="1.3" decel="3.0" length="7.5" minGap="3.0" maxSpeed="16.0" sigma="0.6" speedFactor="normc(0.95,0.08,0.7,1.2)" color="255,165,0" probability="0.15" />
+    <vType id="bus" vClass="bus" accel="1.2" decel="3.0" length="12.0" minGap="3.0" maxSpeed="16.0" sigma="0.6" speedFactor="normc(0.95,0.08,0.7,1.2)" color="0,128,255" probability="0.10" />
+    <vType id="container" vClass="truck" accel="0.9" decel="2.5" length="14.0" minGap="3.5" maxSpeed="14.0" sigma="0.7" speedFactor="normc(0.9,0.07,0.7,1.15)" color="128,64,0" probability="0.04" />
+    <vType id="emergency" vClass="emergency" accel="3.0" decel="5.0" length="5.0" minGap="1.5" maxSpeed="25.0" sigma="0.3" speedFactor="normc(1.1,0.05,0.9,1.2)" color="255,0,255" probability="0.01" />
+  </vTypeDistribution>
+  <route id="r_N_to_S" edges="N_in S_out" />
+  <route id="r_N_to_E" edges="N_in E_out" />
+  <route id="r_N_to_W" edges="N_in W_out" />
+  <route id="r_N_to_N" edges="N_in N_out" />
+  <route id="r_S_to_N" edges="S_in N_out" />
+  <route id="r_S_to_W" edges="S_in W_out" />
+  <route id="r_S_to_E" edges="S_in E_out" />
+  <route id="r_S_to_S" edges="S_in S_out" />
+  <route id="r_E_to_W" edges="E_in W_out" />
+  <route id="r_E_to_S" edges="E_in S_out" />
+  <route id="r_E_to_N" edges="E_in N_out" />
+  <route id="r_E_to_E" edges="E_in E_out" />
+  <route id="r_W_to_E" edges="W_in E_out" />
+  <route id="r_W_to_N" edges="W_in N_out" />
+  <route id="r_W_to_S" edges="W_in S_out" />
+  <route id="r_W_to_W" edges="W_in W_out" />
+  <flow id="flow_1_phase1_N_straight" type="civilianMix" route="r_N_to_S" begin="0" end="900" vehsPerHour="112.58852455019951" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_2_phase1_N_left" type="civilianMix" route="r_N_to_E" begin="0" end="900" vehsPerHour="46.56786027550697" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_3_phase1_N_right" type="civilianMix" route="r_N_to_W" begin="0" end="900" vehsPerHour="44.51977397501469" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_4_phase1_N_uturn" type="civilianMix" route="r_E_to_W" begin="0" end="900" vehsPerHour="23.042978808283806" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_5_phase1_S_straight" type="civilianMix" route="r_N_to_E" begin="0" end="900" vehsPerHour="115.03016468882561" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_6_phase1_S_left" type="civilianMix" route="r_S_to_W" begin="0" end="900" vehsPerHour="45.49161100387573" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_7_phase1_S_right" type="civilianMix" route="r_W_to_N" begin="0" end="900" vehsPerHour="46.83290673792362" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_8_phase1_S_uturn" type="civilianMix" route="r_N_to_S" begin="0" end="900" vehsPerHour="23.08313736319542" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_9_phase1_E_straight" type="civilianMix" route="r_W_to_E" begin="0" end="900" vehsPerHour="118.17859539389609" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_10_phase1_E_left" type="civilianMix" route="r_N_to_W" begin="0" end="900" vehsPerHour="45.42735731601715" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_11_phase1_E_right" type="civilianMix" route="r_N_to_W" begin="0" end="900" vehsPerHour="46.840938448905945" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_12_phase1_E_uturn" type="civilianMix" route="r_E_to_S" begin="0" end="900" vehsPerHour="23.123295918107033" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_13_phase1_W_straight" type="civilianMix" route="r_W_to_E" begin="0" end="900" vehsPerHour="113.70493237674236" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_14_phase1_W_left" type="civilianMix" route="r_W_to_E" begin="0" end="900" vehsPerHour="44.15031526982784" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_15_phase1_W_right" type="civilianMix" route="r_W_to_S" begin="0" end="900" vehsPerHour="46.34297236800194" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_16_phase1_W_uturn" type="civilianMix" route="r_W_to_W" begin="0" end="900" vehsPerHour="22.986756831407547" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_17_phase2a_N_straight" type="civilianMix" route="r_N_to_S" begin="900" end="1500" vehsPerHour="225.18508081138134" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_18_phase2a_N_left" type="civilianMix" route="r_E_to_W" begin="900" end="1500" vehsPerHour="93.12768884003162" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_19_phase2a_N_right" type="civilianMix" route="r_N_to_W" begin="900" end="1500" vehsPerHour="89.03954795002937" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_20_phase2a_N_uturn" type="civilianMix" route="r_N_to_N" begin="900" end="1500" vehsPerHour="46.08595761656761" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_21_phase2a_S_straight" type="civilianMix" route="r_S_to_N" begin="900" end="1500" vehsPerHour="230.06836108863354" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_22_phase2a_S_left" type="civilianMix" route="r_S_to_W" begin="900" end="1500" vehsPerHour="90.98322200775146" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_23_phase2a_S_right" type="civilianMix" route="r_S_to_E" begin="900" end="1500" vehsPerHour="93.66581347584724" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_24_phase2a_S_uturn" type="civilianMix" route="r_S_to_S" begin="900" end="1500" vehsPerHour="46.17430643737316" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_25_phase2a_E_straight" type="civilianMix" route="r_E_to_W" begin="900" end="1500" vehsPerHour="236.36522249877456" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_26_phase2a_E_left" type="civilianMix" route="r_E_to_S" begin="900" end="1500" vehsPerHour="90.8547146320343" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_27_phase2a_E_right" type="civilianMix" route="r_E_to_N" begin="900" end="1500" vehsPerHour="93.68187689781189" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_28_phase2a_E_uturn" type="civilianMix" route="r_E_to_E" begin="900" end="1500" vehsPerHour="46.246591836214066" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_29_phase2a_W_straight" type="civilianMix" route="r_W_to_E" begin="900" end="1500" vehsPerHour="227.4018330425024" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_30_phase2a_W_left" type="civilianMix" route="r_E_to_W" begin="900" end="1500" vehsPerHour="88.30063053965569" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_31_phase2a_W_right" type="civilianMix" route="r_W_to_S" begin="900" end="1500" vehsPerHour="92.67791302502155" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_32_phase2a_W_uturn" type="civilianMix" route="r_W_to_W" begin="900" end="1500" vehsPerHour="45.96548195183277" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_33_phase2b_N_straight" type="civilianMix" route="r_N_to_S" begin="1500" end="2100" vehsPerHour="281.4793430864811" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_34_phase2b_N_left" type="civilianMix" route="r_N_to_E" begin="1500" end="2100" vehsPerHour="116.41161897778511" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_35_phase2b_N_right" type="civilianMix" route="r_N_to_W" begin="1500" end="2100" vehsPerHour="111.30345079302789" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_36_phase2b_N_uturn" type="civilianMix" route="r_E_to_W" begin="1500" end="2100" vehsPerHour="57.60343116521835" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_37_phase2b_S_straight" type="civilianMix" route="r_S_to_N" begin="1500" end="2100" vehsPerHour="287.58344343304634" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_38_phase2b_S_left" type="civilianMix" route="r_W_to_W" begin="1500" end="2100" vehsPerHour="113.72902750968933" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_39_phase2b_S_right" type="civilianMix" route="r_W_to_N" begin="1500" end="2100" vehsPerHour="117.08628270030022" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_40_phase2b_S_uturn" type="civilianMix" route="r_S_to_S" begin="1500" end="2100" vehsPerHour="57.71587511897087" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_41_phase2b_E_straight" type="civilianMix" route="r_E_to_W" begin="1500" end="2100" vehsPerHour="295.4545201957226" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_42_phase2b_E_left" type="civilianMix" route="r_E_to_S" begin="1500" end="2100" vehsPerHour="113.56839329004288" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_43_phase2b_E_right" type="civilianMix" route="r_E_to_N" begin="1500" end="2100" vehsPerHour="117.10234612226488" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_44_phase2b_E_uturn" type="civilianMix" route="r_W_to_N" begin="1500" end="2100" vehsPerHour="57.81225565075874" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_45_phase2b_W_straight" type="civilianMix" route="r_W_to_E" begin="1500" end="2100" vehsPerHour="284.25831508636475" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_46_phase2b_W_left" type="civilianMix" route="r_W_to_N" begin="1500" end="2100" vehsPerHour="110.37177231907843" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_47_phase2b_W_right" type="civilianMix" route="r_W_to_S" begin="1500" end="2100" vehsPerHour="115.84939920902254" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_48_phase2b_W_uturn" type="civilianMix" route="r_N_to_W" begin="1500" end="2100" vehsPerHour="57.45886036753655" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_49_phase2c_N_straight" type="civilianMix" route="r_N_to_S" begin="2100" end="2700" vehsPerHour="337.77360536158085" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_50_phase2c_N_left" type="civilianMix" route="r_E_to_N" begin="2100" end="2700" vehsPerHour="139.6955491155386" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_51_phase2c_N_right" type="civilianMix" route="r_N_to_W" begin="2100" end="2700" vehsPerHour="133.56735363602638" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_52_phase2c_N_uturn" type="civilianMix" route="r_N_to_N" begin="2100" end="2700" vehsPerHour="69.1209047138691" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_53_phase2c_S_straight" type="civilianMix" route="r_S_to_N" begin="2100" end="2700" vehsPerHour="345.09852577745914" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_54_phase2c_S_left" type="civilianMix" route="r_S_to_W" begin="2100" end="2700" vehsPerHour="136.4748330116272" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_55_phase2c_S_right" type="civilianMix" route="r_S_to_E" begin="2100" end="2700" vehsPerHour="140.49872021377087" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_56_phase2c_S_uturn" type="civilianMix" route="r_S_to_S" begin="2100" end="2700" vehsPerHour="69.25744380056858" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_57_phase2c_E_straight" type="civilianMix" route="r_E_to_W" begin="2100" end="2700" vehsPerHour="354.54381789267063" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_58_phase2c_E_left" type="civilianMix" route="r_N_to_S" begin="2100" end="2700" vehsPerHour="136.28207194805145" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_59_phase2c_E_right" type="civilianMix" route="r_E_to_N" begin="2100" end="2700" vehsPerHour="140.52281534671783" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_60_phase2c_E_uturn" type="civilianMix" route="r_E_to_E" begin="2100" end="2700" vehsPerHour="69.37791946530342" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_61_phase2c_W_straight" type="civilianMix" route="r_W_to_E" begin="2100" end="2700" vehsPerHour="341.10676541924477" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_62_phase2c_W_left" type="civilianMix" route="r_W_to_N" begin="2100" end="2700" vehsPerHour="132.4429140985012" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_63_phase2c_W_right" type="civilianMix" route="r_W_to_S" begin="2100" end="2700" vehsPerHour="139.0208853930235" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_64_phase2c_W_uturn" type="civilianMix" route="r_W_to_W" begin="2100" end="2700" vehsPerHour="68.95223878324032" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_65_phase3_N_straight" type="civilianMix" route="r_N_to_N" begin="2700" end="3600" vehsPerHour="112.58852455019951" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_66_phase3_N_left" type="civilianMix" route="r_S_to_S" begin="2700" end="3600" vehsPerHour="46.56786027550697" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_67_phase3_N_right" type="civilianMix" route="r_E_to_S" begin="2700" end="3600" vehsPerHour="44.51977397501469" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_68_phase3_N_uturn" type="civilianMix" route="r_W_to_W" begin="2700" end="3600" vehsPerHour="23.042978808283806" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_69_phase3_S_straight" type="civilianMix" route="r_S_to_N" begin="2700" end="3600" vehsPerHour="115.03016468882561" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_70_phase3_S_left" type="civilianMix" route="r_S_to_N" begin="2700" end="3600" vehsPerHour="45.49161100387573" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_71_phase3_S_right" type="civilianMix" route="r_S_to_E" begin="2700" end="3600" vehsPerHour="46.83290673792362" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_72_phase3_S_uturn" type="civilianMix" route="r_W_to_E" begin="2700" end="3600" vehsPerHour="23.08313736319542" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_73_phase3_E_straight" type="civilianMix" route="r_E_to_W" begin="2700" end="3600" vehsPerHour="118.17859539389609" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_74_phase3_E_left" type="civilianMix" route="r_W_to_N" begin="2700" end="3600" vehsPerHour="45.42735731601715" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_75_phase3_E_right" type="civilianMix" route="r_N_to_W" begin="2700" end="3600" vehsPerHour="46.840938448905945" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_76_phase3_E_uturn" type="civilianMix" route="r_E_to_E" begin="2700" end="3600" vehsPerHour="23.123295918107033" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_77_phase3_W_straight" type="civilianMix" route="r_N_to_E" begin="2700" end="3600" vehsPerHour="113.70493237674236" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_78_phase3_W_left" type="civilianMix" route="r_W_to_N" begin="2700" end="3600" vehsPerHour="44.15031526982784" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_79_phase3_W_right" type="civilianMix" route="r_W_to_S" begin="2700" end="3600" vehsPerHour="46.34297236800194" departLane="random" departSpeed="random" departPos="random_free" />
+  <flow id="flow_80_phase3_W_uturn" type="civilianMix" route="r_W_to_W" begin="2700" end="3600" vehsPerHour="22.986756831407547" departLane="random" departSpeed="random" departPos="random_free" />
+</routes>
